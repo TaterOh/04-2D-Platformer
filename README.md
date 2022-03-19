@@ -7,7 +7,7 @@ Platformer project for MSCH-C220
 ## References
 Music from [Patrick de Arteaga](https://patrickdearteaga.com)
 
-Art from Platformer Pack Redux at [Kenney.nl](https://kenney.nl/assets/platformer-pack-redux)
+Art from Pixel Platformer at [Kenney.nl](https://kenney.nl/assets/pixel-platformer)
 
 ## Future Development
 
