@@ -20,7 +20,7 @@ Coins
 
 HUD & a menu
 
-**Restart & quit buttons on the pause menu
+* Restart & quit buttons on the pause menu
 
 3 songs
 
