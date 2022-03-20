@@ -4,11 +4,25 @@ Platformer project for MSCH-C220
 
 ## Implementation
 
+Camera following player
+
+Levels
+
+Save & load
+
+Enemies
+
 ## References
 Music from [Patrick de Arteaga](https://patrickdearteaga.com)
 
-Art from Pixel Platformer at [Kenney.nl](https://kenney.nl/assets/pixel-platformer)
+Level art from Pixel Platformer at [Kenney.nl](https://kenney.nl/assets/pixel-platformer)
+
+Enemy art from Pixel Line Platformer at [Kenney.nl](https://kenney.nl/assets/pixel-line-platformer)
 
 ## Future Development
 
+None
+
 ## Created by
+
+Thadeus Sylvester II
