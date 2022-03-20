@@ -12,6 +12,10 @@ Save & load
 
 Enemies
 
+Coins
+
+HUD & a menu
+
 ## References
 Music from [Patrick de Arteaga](https://patrickdearteaga.com)
 
