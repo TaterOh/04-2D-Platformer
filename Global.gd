@@ -47,9 +47,10 @@ func load_save_level(data):
 	score = data["score"]
 	lives = data["lives"]
 	health = data["health"]
-	level = data["level"]
+	level = int(data["level"])
 	
-	get_tree().change_scene("res://Levels/Level" + var2str(level) + ".tscn")
+	var scene_to_load = "res://Levels/Level" + var2str(level) + ".tscn"
+	get_tree().change_scene(scene_to_load)
 	call_deferred("load_save_data", data)
 
 func get_save_data():
@@ -96,7 +97,11 @@ func load_save_data(data):
 	for c in coin_c.get_children():
 		c.queue_free()
 	for c in data["coins"]:
-		coin_c.spawn(str2var(c.position))
+		coin_c.spawn(str2var(c))
+	
+	var camera = get_node_or_null("/root/Game/Camera")
+	if camera != null:
+		camera.position = str2var(data["player"])
 
 func save_game(which_file):
 	var file = File.new()
@@ -112,7 +117,7 @@ func load_game(which_file):
 		var data = parse_json(file.get_as_text())
 		file.close()
 		if typeof(data) == TYPE_DICTIONARY:
-			load_save_data(data)
+			load_save_level(data)
 		else:
 			print("Corrupted data")
 	else:

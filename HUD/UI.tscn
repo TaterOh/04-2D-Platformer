@@ -77,10 +77,32 @@ text = "Save"
 
 [node name="Load" type="Button" parent="Menu"]
 margin_left = 462.0
-margin_top = 360.0
+margin_top = 350.0
 margin_right = 562.0
-margin_bottom = 385.0
+margin_bottom = 375.0
 text = "Load"
+
+[node name="Restart" type="Button" parent="Menu"]
+margin_left = 462.0
+margin_top = 390.0
+margin_right = 562.0
+margin_bottom = 415.0
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="Menu"]
+margin_left = 462.0
+margin_top = 430.0
+margin_right = 562.0
+margin_bottom = 455.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="Menu/Save" to="Menu" method="_on_Save_pressed"]
 [connection signal="pressed" from="Menu/Load" to="Menu" method="_on_Load_pressed"]
+[connection signal="pressed" from="Menu/Restart" to="Menu" method="_on_Restart_pressed"]
+[connection signal="pressed" from="Menu/Quit" to="Menu" method="_on_Quit_pressed"]
