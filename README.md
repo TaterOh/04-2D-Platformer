@@ -14,7 +14,9 @@ Levels & 1-way platforms
 
 Save & load
 
-2 enemies
+Restart & quit buttons on the pause menu
+
+2 enemies types
 
 Coins
 
