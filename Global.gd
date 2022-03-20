@@ -1,5 +1,7 @@
 extends Node
 
+var gravity = 25
+
 var score = 0
 var lives = 3
 var max_lives = 3
@@ -50,6 +52,7 @@ func load_save_level(data):
 	level = int(data["level"])
 	
 	var scene_to_load = "res://Levels/Level" + var2str(level) + ".tscn"
+	print(scene_to_load)
 	get_tree().change_scene(scene_to_load)
 	call_deferred("load_save_data", data)
 

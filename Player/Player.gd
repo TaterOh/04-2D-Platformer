@@ -1,10 +1,13 @@
 extends KinematicBody2D
 
 onready var SM = $StateMachine
+onready var Attack = load("res://Weapons/Fire.tscn")
 
 var velocity = Vector2.ZERO
 var jump_power = Vector2.ZERO
 var direction = 1
+var shoot_speed = 1
+var can_shoot = true
 
 export var gravity = Vector2(0,30)
 
@@ -32,6 +35,9 @@ func _physics_process(_delta):
 	if is_on_floor():
 		double_jumped = false
 		set_wall_raycasts(true)
+	
+	if Input.is_action_just_pressed("attack"):
+		shoot()
 
 func is_moving():
 	if Input.is_action_pressed("left") or Input.is_action_pressed("right"):
@@ -79,6 +85,16 @@ func set_wall_raycasts(is_enabled):
 	$Wall/Left.enabled = is_enabled
 	$Wall/Right.enabled = is_enabled
 
+func shoot():
+	if can_shoot:
+		var attack = Attack.instance()
+		attack.position = position
+		attack.position.x += 10*direction
+		attack.direction = direction
+		get_node("/root/Game/Attack_Container").add_child(attack)
+		$ShootTimer.wait_time = shoot_speed
+		can_shoot = false
+
 func damage(d):
 	Global.damage(d)
 	if Global.health <= 0:
@@ -87,3 +103,7 @@ func damage(d):
 func die():
 	Global.decrease_lives(1)
 	queue_free()
+
+
+func _on_ShootTimer_timeout():
+	can_shoot = true

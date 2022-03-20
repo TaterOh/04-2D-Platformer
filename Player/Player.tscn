@@ -222,5 +222,9 @@ explosiveness = 0.25
 randomness = 0.85
 process_material = SubResource( 21 )
 
+[node name="ShootTimer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="StateMachine/Coyote/Timer" to="StateMachine/Coyote" method="_on_Timer_timeout"]
 [connection signal="timeout" from="StateMachine/WallJump/Timer" to="StateMachine/WallJump" method="_on_Timer_timeout"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
