@@ -22,8 +22,7 @@ var is_jumping = false
 var double_jumped = false
 var should_direction_flip = true # wether or not player controls (left/right) can flip the player sprite
 
-
-func _physics_process(_delta):
+func _physics_process(_delta):	
 	velocity.x = clamp(velocity.x,-max_move,max_move)
 		
 	if should_direction_flip:
@@ -80,5 +79,11 @@ func set_wall_raycasts(is_enabled):
 	$Wall/Left.enabled = is_enabled
 	$Wall/Right.enabled = is_enabled
 
+func damage(d):
+	Global.damage(d)
+	if Global.health <= 0:
+		die()
+
 func die():
+	Global.decrease_lives(1)
 	queue_free()

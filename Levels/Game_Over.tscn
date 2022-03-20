@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Levels/Game_Over.gd" type="Script" id=1]
+
+[node name="Game_Over" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 512.0
+margin_bottom = 256.0
+rect_scale = Vector2( 2, 2 )
+text = "GAME OVER"
+align = 1
+valign = 1
+
+[node name="Restart" type="Button" parent="."]
+margin_left = 485.0
+margin_top = 300.0
+margin_right = 545.0
+margin_bottom = 320.0
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 485.0
+margin_top = 340.0
+margin_right = 545.0
+margin_bottom = 360.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
