@@ -14,13 +14,15 @@ Levels & 1-way platforms
 
 Save & load
 
-Restart & quit buttons on the pause menu
-
 2 enemies types
 
 Coins
 
 HUD & a menu
+
+*Restart & quit buttons on the pause menu
+
+3 songs
 
 ## References
 
