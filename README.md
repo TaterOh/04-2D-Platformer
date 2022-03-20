@@ -10,7 +10,7 @@ Camera following player
 
 The player ability to shoot fire (use spacebar)
 
-Levels
+Levels & 1-way platforms
 
 Save & load
 
