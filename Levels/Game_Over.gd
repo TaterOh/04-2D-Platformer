@@ -2,7 +2,7 @@ extends Control
 
 
 func _ready():
-	pass
+	$Score.text = "Score: " + str(Global.score)
 
 
 func _on_Restart_pressed():
