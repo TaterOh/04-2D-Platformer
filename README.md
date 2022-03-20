@@ -8,11 +8,13 @@ Platformer project for MSCH-C220
 
 Camera following player
 
+The player ability to shoot fire (use spacebar)
+
 Levels
 
 Save & load
 
-Enemies
+2 enemies
 
 Coins
 
