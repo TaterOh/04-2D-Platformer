@@ -16,6 +16,8 @@ Coins
 
 HUD & a menu
 
+Fire shader from [2D Fire](https://godotshaders.com/shader/2d-fire/)
+
 ## References
 Music from [Patrick de Arteaga](https://patrickdearteaga.com)
 
